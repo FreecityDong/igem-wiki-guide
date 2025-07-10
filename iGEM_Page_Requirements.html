@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGEM 页面要求与撰写指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>iGEM 页面要求与撰写指南</h1>
+            </div>
+        </div>
+    </header>
+    
+    <div id="menubar-box"></div>
+    <script>
+        fetch('menu.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('menubar-box').innerHTML = html; });
+    </script>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>页面导航</h3>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-page="home">🏠 home.html — 首页</a></li>
+                    <li><a href="#members" data-page="members">👤 members.html — 团队成员</a></li>
+                    <li><a href="#attributions" data-page="attributions">🙌 attributions.html — 致谢</a></li>
+                    <li><a href="#description" data-page="description">🧬 description.html — 项目简介</a></li>
+                    <li><a href="#engineering" data-page="engineering">🛠 engineering.html — 工程设计</a></li>
+                    <li><a href="#results" data-page="results">📈 results.html — 实验结果</a></li>
+                    <li><a href="#contribution" data-page="contribution">🧠 contribution.html — 贡献</a></li>
+                    <li><a href="#experiments" data-page="experiments">🧪 experiments.html — 实验设计</a></li>
+                    <li><a href="#notebook" data-page="notebook">📔 notebook.html — 实验日志</a></li>
+                    <li><a href="#measurement" data-page="measurement">📏 measurement.html — 测量</a></li>
+                    <li><a href="#plant" data-page="plant">🌿 plant.html — 植物模块</a></li>
+                    <li><a href="#safety" data-page="safety">🛡 safety-and-security.html — 安全与保密</a></li>
+                    <li><a href="#model" data-page="model">📊 model.html — 建模</a></li>
+                    <li><a href="#software" data-page="software">💻 software.html — 软件</a></li>
+                    <li><a href="#hardware" data-page="hardware">🖥 hardware.html — 硬件</a></li>
+                    <li><a href="#entrepreneurship" data-page="entrepreneurship">🧑‍🔬 entrepreneurship.html — 创业计划</a></li>
+                    <li><a href="#human-practices" data-page="human-practices">🧬 human-practices.html — 人文实践</a></li>
+                    <li><a href="#education" data-page="education">🎓 education.html — 教育</a></li>
+                    <li><a href="#inclusivity" data-page="inclusivity">🧑‍🤝‍🧑 inclusivity.html — 包容性</a></li>
+                    <li><a href="#sustainability" data-page="sustainability">🌿 sustainability.html — 可持续发展</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Home Page -->
+                <section id="home" class="page-section active">
+                    <div class="page-header">
+                        <h1>🏠 home.html — 首页（Home）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <h2>原文内容：</h2>
+                        <h3>Essential First Steps</h3>
+                        <p>Familiarize yourself with the official iGEM competition rules, policies, and judging criteria:</p>
+                        <ul>
+                            <li>Carefully review the <a href="https://competition.igem.org/deliverables/team-wiki" target="_blank">Wiki Requirements page</a> to ensure your wiki meets all necessary standards for judging and awards.</li>
+                            <li>Understand the criteria and required wiki pages for Gold, Silver, and Bronze Medals on the <a href="https://competition.igem.org/judging/medals" target="_blank">Medals page</a>.</li>
+                            <li>Explore the various Project Prizes and their corresponding wiki requirements on the <a href="https://competition.igem.org/judging/project-prizes" target="_blank">Project Prizes Page</a>.</li>
+                            <li>Discover the eligibility criteria and wiki requirements for Special Prizes on the <a href="https://competition.igem.org/judging/special-prizes" target="_blank">Special Prizes Page</a>.</li>
+                            <li>Prepare for Deadlines: Stay up-to-date with important deadlines and events by checking the <a href="https://competition.igem.org/calendar" target="_blank">iGEM Competition Calendar</a>.</li>
+                        </ul>
+
+                        <h3>Building Your Wiki</h3>
+                        <ul>
+                            <li><strong>Content First, Design Second</strong>: Focus on clearly documenting your project, research, and activities. Design can be refined later.</li>
+                            <li><strong>Navigation is Key</strong>: Structure your wiki with clear and intuitive navigation. Visitors should easily find information.</li>
+                            <li><strong>Accessibility Matters</strong>: Use readable fonts, appropriate color contrast, and ensure your wiki is mobile-friendly.</li>
+                            <li><strong>Media Optimization</strong>: Compress images and videos to reduce file sizes and improve loading times.</li>
+                            <li><strong>Document Early & Often</strong>: Start documenting your project from day one. Don't wait until the Wiki Freeze.</li>
+                            <li><strong>Prepare for Deadlines</strong>: Stay up-to-date with important deadlines and events by checking the iGEM Competition Calendar.</li>
+                        </ul>
+
+                        <h3>Tips for Success</h3>
+                        <ul>
+                            <li><strong>Clearly Define Your Project</strong>: Explain your project's goals, methodology, and expected outcomes in a clear and concise manner.</li>
+                            <li><strong>Show Your Progress</strong>: Regularly update your wiki with your team's progress, experiments, and results.</li>
+                            <li><strong>Engage Your Audience</strong>: Consider your global audience and use language that is accessible to everyone.</li>
+                            <li><strong>Human Practices & Safety</strong>: Thoroughly document your team's human practices activities and safety considerations.</li>
+                            <li><strong>Collaborate & Share</strong>: Highlight collaborations with other teams and institutions.</li>
+                            <li><strong>Have Fun and Learn!</strong> iGEM is a unique opportunity to learn, grow, and contribute to synthetic biology.</li>
+                        </ul>
+
+                        <p><strong>Inspirations</strong>（示例团队链接列表）</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>首页是所有访客和评审进入团队 Wiki 的第一站，内容应<strong>开门见山</strong>，突出项目主旨与团队气质。</li>
+                            <li>推荐分为：
+                                <ul>
+                                    <li><strong>第一屏</strong>：项目/团队口号、LOGO、团队照片或主视觉</li>
+                                    <li><strong>快速导航</strong>：跳转至 Description、Results、Engineering 等核心页面的按钮或卡片</li>
+                                    <li><strong>iGEM 官方必读提醒</strong>：通过显眼区域或卡片，突出 Wiki要求、奖牌标准、项目奖项、特殊奖项、重要日历 等关键链接</li>
+                                    <li><strong>内容结构指引</strong>："内容优先、设计其次"、"导航清晰"、"图片视频优化"、"文档实时更新"、"注意重要截止时间"</li>
+                                    <li><strong>团队风采</strong>：可下拉加入成员墙、团队故事、赛事花絮、合作团队（如 Inspirations 链接列表）</li>
+                                </ul>
+                            </li>
+                            <li><strong>语言风格</strong>建议清晰亲和，适当添加图标、加粗、彩色标记，体现专业与活力</li>
+                            <li>可配合滚动大图（Banner）、时间轴（重要事件）、联系方式、版权/仓库等信息</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Members Page -->
+                <section id="members" class="page-section">
+                    <div class="page-header">
+                        <h1>👤 2. members.html — 团队成员（Members）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>This page presents our team members, their roles, and our instructors. Teamwork and collaboration are vital to our project success.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Name, photo, and role of each member</li>
+                            <li>Distinction between students, instructors, advisors, and PIs</li>
+                            <li>Optionally: personal bios, fun facts, or quotes</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>分类呈现"学生成员""顾问与导师""PI 教授"</li>
+                            <li>每位成员配头像、姓名、岗位/任务、兴趣爱好/名言</li>
+                            <li>可附小组照、活动花絮或团队理念介绍</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Attributions Page -->
+                <section id="attributions" class="page-section">
+                    <div class="page-header">
+                        <h1>🙌 3. attributions.html — 致谢（Attributions）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Accurate attribution is essential in the iGEM Competition. It ensures that the judges can properly assess your team's contributions and recognize the support provided by external collaborators. This page is dedicated to fulfilling the Attributions requirement for judging.</p>
+                        
+                        <div class="medal-requirement">
+                            <h3>Bronze Medal Criterion #2</h3>
+                            <p>Describe what work your team members did and what other people did for your project using the standardized Project Attributions Form.</p>
+                            <p>Visit the Medals page for more information.</p>
+                        </div>
+
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>The standard navigation menu of your wiki</li>
+                            <li>The standard footer of your wiki</li>
+                            <li>The embedded iframe containing your standardized team's Project Attribution form.</li>
+                        </ul>
+
+                        <h3>Tips for Success</h3>
+                        <ul>
+                            <li>Teams must use the official Attributions form. This form clearly delineates the work conducted by your team members and the support received from others. Carefully review the instructions and requirements of this deliverable on the Project Attribution page.</li>
+                            <li>Teams must use the standard form. Do not create your own form.</li>
+                            <li>The standard Attributions Form must be filled out completely, accurately and honestly.</li>
+                            <li>For the best results, we recommend teams start filling out the Attributions Form early in the season and updating it often.</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>使用官方 Project Attributions 表单嵌入页面（iframe）</li>
+                            <li>明确区分队员 vs 顾问 vs 教师 vs 合作者的工作</li>
+                            <li>建议用表格在"贡献概览"中补充主要角色说明（非必须）</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Description Page -->
+                <section id="description" class="page-section">
+                    <div class="page-header">
+                        <h1>🧬 4. description.html — 项目简介（Description）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <div class="medal-requirement">
+                            <h3>Bronze Medal Criterion #1: Wiki</h3>
+                            <p>Describe how and why you chose your iGEM project.</p>
+                            <p>Visit the Medals page for more information.</p>
+                        </div>
+
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Explain the problem your project addresses and its potential impact.</li>
+                            <li>Provide a clear and concise summary of your project's goals and objectives.</li>
+                            <li>Detail the specific reasons why your team chose this project.</li>
+                            <li>Explain the inspiration behind your project, including any prior research or real-world problems that motivated your team.</li>
+                            <li>Use illustrations, diagrams, and other visual aids to enhance understanding.</li>
+                            <li>Include relevant scientific background, technical details, and experimental approaches.</li>
+                        </ul>
+
+                        <h3>Tips for Success</h3>
+                        <ul>
+                            <li>While providing detailed information, strive for clarity and conciseness.</li>
+                            <li>Use summaries and subheadings to organize your content.</li>
+                            <li>Utilize visuals to enhance understanding and engagement.</li>
+                            <li>Document your research process and sources thoroughly.</li>
+                        </ul>
+
+                        <h3>References</h3>
+                        <ul>
+                            <li>Cite all relevant research papers, scientific articles, and other sources that informed your project.</li>
+                            <li>Create a dedicated "References" section at the end of the page, and use a consistent citation style.</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>用通俗语言介绍背景问题</li>
+                            <li>阐明项目目标和成果预期</li>
+                            <li>建议配图解（系统框图 + 应用场景图）</li>
+                            <li>补充选题依据和研究逻辑</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Engineering Page -->
+                <section id="engineering" class="page-section">
+                    <div class="page-header">
+                        <h1>🛠 5. engineering.html — 工程设计（Engineering）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>We applied the Engineering Design Cycle to iterate our system: Design → Build → Test → Learn. Our documentation reflects this process with examples of how we improved components over time.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Clear examples of at least one cycle of engineering (DBTL)</li>
+                            <li>Evidence of design, testing, results, and improvements</li>
+                            <li>Emphasis on how the process guided decision-making</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>用 Design-Build-Test-Learn 循环作为主结构组织页面</li>
+                            <li>每个循环段落应说明输入/输出/结论/下一步</li>
+                            <li>推荐用表格或流程图辅助展示（如箭头图）</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Results Page -->
+                <section id="results" class="page-section">
+                    <div class="page-header">
+                        <h1>📈 6. results.html — 实验结果（Results）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our results demonstrate the successful implementation of our genetic circuits and measurable output from our engineered system. Key experimental data is presented in figures and tables.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Summary of your most important experimental results</li>
+                            <li>Figures, tables, and graphs that show your results clearly</li>
+                            <li>Explanation of how the results support your engineering goals</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>明确本页为数据总结页，可精选 3–5 个关键图表重点展示</li>
+                            <li>每个图下应附有解释性段落或说明框</li>
+                            <li>可采用图 + 段落 + 小结结构（每个核心结果一个小节）</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Contribution Page -->
+                <section id="contribution" class="page-section">
+                    <div class="page-header">
+                        <h1>🧠 7. contribution.html — 贡献（Contribution）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <div class="medal-requirement">
+                            <h3>Bronze Medal Criterion #3</h3>
+                            <p>Make a useful contribution for future iGEM teams and document it on this page.</p>
+                            <p>Visit the Medals page for more information.</p>
+                        </div>
+
+                        <h3>What Should this Page Contain?</h3>
+                        <p>Teams must document their contribution and explain why their effort is a contribution to fellow iGEMers. There is no single definition of what a contribution should be. We invite teams to be creative and generous in the knowledge, data or tools they may provide to the community.</p>
+                        
+                        <p>A few examples of contributions are:</p>
+                        <ul>
+                            <li>Creating a new BioBrick part or significantly improving an existing one in the iGEM Registry.</li>
+                            <li>Developing software, tools, or resources that can considerably assist future iGEM teams.</li>
+                            <li>Sharing optimized protocols, experimental techniques, or methodologies.</li>
+                            <li>Any other contributions that provide a clear benefit to future iGEM teams.</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>强调"为他人有用"，不仅限于自己的实验</li>
+                            <li>包括你做出的生物元件、数据库、软件、图谱、建模模板等</li>
+                            <li>建议给出清晰链接（如 GitLab 项目地址），并说明使用方式</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Experiments Page -->
+                <section id="experiments" class="page-section">
+                    <div class="page-header">
+                        <h1>🧪 8. experiments.html — 实验设计（Experiments）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>This page describes our experimental workflow, including our methods, protocols, and troubleshooting process.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Overview of the experiments your team conducted</li>
+                            <li>Descriptions of methods and protocols used</li>
+                            <li>Observations and how experiments were improved</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>按模块介绍实验内容：如感应模块、表达模块等</li>
+                            <li>详细写出方法步骤 + 图示实验流程图（protocol flow）</li>
+                            <li>展示关键实验问题与解决方案</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Notebook Page -->
+                <section id="notebook" class="page-section">
+                    <div class="page-header">
+                        <h1>📔 9. notebook.html — 实验日志（Notebook）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>This page documents our weekly progress, experiments, and troubleshooting.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>A chronological record of your team's lab work and decisions</li>
+                            <li>Highlights of key experiments, insights, and challenges</li>
+                            <li>Structured logs (e.g. by date, week, or milestone)</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>推荐用周为单位，附表格/日记形式展示</li>
+                            <li>可配图记录仪器、操作与试剂批次等细节</li>
+                            <li>明确展示迭代改进、实验失败与教训总结</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Measurement Page -->
+                <section id="measurement" class="page-section">
+                    <div class="page-header">
+                        <h1>📏 10. measurement.html — 测量（Measurement）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our measurement strategy was designed to ensure accurate, repeatable, and meaningful data to support our engineering process.</p>
+                        <p>We established standard operating procedures, validated tools for signal output, and calibrated instruments.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>What you measured and how</li>
+                            <li>Why your measurements are useful for engineering your system</li>
+                            <li>How you ensured measurement accuracy and repeatability</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>明确哪些参数被测量（如产量、荧光强度、比活力等）</li>
+                            <li>描述测量方法与设备，并说明精度保证措施</li>
+                            <li>若使用标准曲线或比对分析，也应附图说明</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Plant Page -->
+                <section id="plant" class="page-section">
+                    <div class="page-header">
+                        <h1>🌿 11. plant.html — 植物模块（Plant）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>This section explains the plant-related aspects of our project, including gene expression, transformation, and phenotypic evaluation.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Details of plant synthetic biology or applications</li>
+                            <li>Genetic constructs, protocols, and results in plants</li>
+                            <li>Challenges and innovations in plant system engineering</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>适用于以植物为 chassis 的项目或使用植物进行测试验证的设计</li>
+                            <li>包括载体构建、转化方法、荧光/形态学检测等</li>
+                            <li>可展示培养系统设计、条件控制与时间线跟踪</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Safety Page -->
+                <section id="safety" class="page-section">
+                    <div class="page-header">
+                        <h1>🛡 12. safety-and-security.html — 安全与保密（Safety and Security）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>We addressed biosafety and biosecurity concerns by following guidelines and integrating safety features in our design.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Laboratory safety protocols followed</li>
+                            <li>Design elements to ensure user and environmental safety</li>
+                            <li>Review of relevant regulations and ethical implications</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>指明是否使用危险菌株/毒素/转基因植物等</li>
+                            <li>展示风险识别 → 对策 → 法规匹配过程</li>
+                            <li>推荐引用 iGEM 官方安全指导链接或标准表</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Model Page -->
+                <section id="model" class="page-section">
+                    <div class="page-header">
+                        <h1>📊 13. model.html — 建模（Model）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our model simulates the behavior of our synthetic system and helps us make predictions. It informed our experimental design and was validated with lab results.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Overview of your model's assumptions and structure</li>
+                            <li>Mathematical or computational framework</li>
+                            <li>How the model supported system design or optimization</li>
+                            <li>Graphs or simulations demonstrating model output</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>建议分为"模型结构"、"数学原理"、"仿真结果"、"对项目的帮助"几个部分</li>
+                            <li>数学推导要有解释，代码可附 GitLab 链接</li>
+                            <li>图表应突出模拟趋势、系统行为或与实验数据的对比</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Software Page -->
+                <section id="software" class="page-section">
+                    <div class="page-header">
+                        <h1>💻 14. software.html — 软件（Software）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>We developed software tools to support our modeling, analysis, and data visualization. These tools enhance reproducibility and usability for our team and future iGEM projects.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Overview of software developed or adapted</li>
+                            <li>Features, functionality, and application scenarios</li>
+                            <li>Source code access (e.g. GitLab repo) and usage documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>展示你开发的 Web 工具、模拟平台、数据处理脚本、插件等</li>
+                            <li>建议提供截图、界面功能点介绍和使用方法</li>
+                            <li>附 GitLab 地址与开源协议说明</li>
+                            <li>若集成到硬件或实验流程中，也应阐述其作用与影响</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Hardware Page -->
+                <section id="hardware" class="page-section">
+                    <div class="page-header">
+                        <h1>🖥 15. hardware.html — 硬件（Hardware）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our project integrates hardware components to support sensing and response. We designed and fabricated devices to complement our biological system.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Description and purpose of hardware systems</li>
+                            <li>CAD designs, schematics, and build instructions</li>
+                            <li>Testing results and system integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>展示硬件系统的结构设计、应用场景与关键参数（如传感器、执行机构）</li>
+                            <li>附上 3D 模型截图、结构图、电路图</li>
+                            <li>推荐增加构建过程记录（焊接、3D 打印等）</li>
+                            <li>提供 GitLab 仓库或零件清单供他人复现</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Entrepreneurship Page -->
+                <section id="entrepreneurship" class="page-section">
+                    <div class="page-header">
+                        <h1>🧑‍🔬 16. entrepreneurship.html — 创业计划（Entrepreneurship）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our entrepreneurship strategy outlines how we aim to bring our project to market and ensure sustainability. We evaluated risks, conducted market analysis, and consulted with business experts.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Market need and user group description</li>
+                            <li>Business model or plan elements</li>
+                            <li>Risk evaluation and implementation strategy</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>可使用商业模式图（Business Model Canvas）展示全局逻辑</li>
+                            <li>包括潜在客户、合作渠道、定价逻辑等</li>
+                            <li>展示你与产业、投资人、孵化器交流内容</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Human Practices Page -->
+                <section id="human-practices" class="page-section">
+                    <div class="page-header">
+                        <h1>🧬 17. human-practices.html — 人文实践（Human Practices）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Human Practices helped shape our project design. We engaged with stakeholders, experts, and communities to understand ethical, legal, and social implications of our work.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Stakeholder engagement and interview summaries</li>
+                            <li>How feedback changed your project direction</li>
+                            <li>Ethical, legal, and societal context you considered</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>指出你们与哪些利益相关者接触（研究者、企业、政策制定者、终端用户等）</li>
+                            <li>展示调研过程、问卷、会议纪要、反馈要点</li>
+                            <li>建议引用典型反馈 → 展示其如何修改了你们的设计或目标</li>
+                            <li>可分类展示"调研内容"、"收获"、"设计影响"</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education Page -->
+                <section id="education" class="page-section">
+                    <div class="page-header">
+                        <h1>🎓 18. education.html — 教育（Education）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>We designed outreach programs to share synthetic biology with diverse audiences, including students, teachers, and the general public.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Description of educational activities conducted</li>
+                            <li>Target audience and learning outcomes</li>
+                            <li>How you measured the effectiveness of your outreach</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>展示你团队开展的所有教育相关工作：讲座、公开课、校内活动、线上课程、社交平台等</li>
+                            <li>建议对不同受众群体（小学生、中学生、大众等）分类陈述内容与目标</li>
+                            <li>若有教学反馈问卷、访问量统计或社群互动数据也建议展示</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Inclusivity Page -->
+                <section id="inclusivity" class="page-section">
+                    <div class="page-header">
+                        <h1>🧑‍🤝‍🧑 19. inclusivity.html — 包容性（Inclusivity）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>We designed our project to be inclusive across genders, cultures, and educational backgrounds. We conducted outreach and evaluation to assess inclusivity.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>Efforts made to ensure inclusivity in project design</li>
+                            <li>Strategies to engage underrepresented communities</li>
+                            <li>Evaluation of accessibility and impact</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>体现项目或工具是否对各类群体（如视觉障碍者、非英语使用者等）友好</li>
+                            <li>可展示你们设计的宣传/教育材料包容性的语言或形式特点</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Sustainability Page -->
+                <section id="sustainability" class="page-section">
+                    <div class="page-header">
+                        <h1>🌿 20. sustainability.html — 可持续发展（Sustainability）</h1>
+                    </div>
+                    
+                    <div class="glass-card">
+                        <p>Our sustainability strategy aims to ensure that our project contributes to long-term environmental, economic, and social well-being.</p>
+                        <p>We evaluated the environmental impact of our components and system, selected materials that minimize ecological harm, and consulted lifecycle assessment resources.</p>
+                        
+                        <h3>What Should this Page Contain?</h3>
+                        <ul>
+                            <li>How your team has incorporated sustainability thinking into your project design</li>
+                            <li>Discussion of materials, processes, and long-term consequences</li>
+                            <li>Consideration of environmental, social, and economic impacts</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2>解读与撰写建议：</h2>
+                        <ul>
+                            <li>建议从"环境、经济、社会"三方面展开可持续分析</li>
+                            <li>可使用生命周期分析（LCA）图示说明</li>
+                            <li>补充材料选择、能耗控制等细节内容</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

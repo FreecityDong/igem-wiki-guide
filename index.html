@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iGEM 网页开发文档集</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>iGEM 网页开发文档集</h1>
+  </header>
+
+  <div id="menubar-box"></div>
+  <script>
+    fetch('menu.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('menubar-box').innerHTML = html; });
+  </script>
+
+  <div class="container">
+    <main>
+      <section>
+        <h2>📌 为什么要制作这组网页？</h2>
+        <p>本网页文档集是为了帮助 iGEM 队伍成员，特别是网页开发新手，快速了解和掌握制作 iGEM Wiki 网站的基本流程、内容规范、页面设计与部署方法。</p>
+        <p>iGEM 的官方 Wiki 页面是项目展示的重要窗口，不仅承载了项目的结构化内容、实验成果与成员介绍，也是获得评审关注和奖项的重要依据。因此，我们希望通过这组网页资料：</p>
+        <ul>
+          <li>统一队伍的页面开发规范</li>
+          <li>提供可复用的网页结构模板</li>
+          <li>降低非技术队员参与门槛</li>
+          <li>实现内容与结构的分离，便于协作</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📘 如何使用这组文档？</h2>
+        <p>点击顶部导航栏进入各类文档页面，每一页均聚焦一个主题：</p>
+        <ul>
+          <li><strong>设计与布局：</strong> 网页结构、布局建议与 sidebar 样式</li>
+          <li><strong>语法手册：</strong> HTML / CSS / JavaScript 快速参考</li>
+          <li><strong>开发说明：</strong> VS Code 使用、GitHub Pages 部署方法</li>
+          <li><strong>项目结构：</strong> HTML 方案与 React 架构示例</li>
+        </ul>
+        <p>每个页面使用统一风格，并通过顶部导航栏进行快速跳转。你也可以将页面保存本地或部署到 GitHub Pages 上作为团队内部学习网站。</p>
+      </section>
+
+      <section>
+        <h2>📂 文档目录</h2>
+        <ul>
+          <li><a href="iGEM_Page_Requirements.html">iGEM 页面要求与撰写指南</a></li>
+          <li><a href="layout_intro.html">网页设计基础与布局入门</a></li>
+          <li><a href="html_intro.html">HTML语法手册</a></li>
+          <li><a href="css_intro.html">CSS语法手册</a></li>
+          <li><a href="js_intro.html">JavaScript 语法手册</a></li>
+          <li><a href="IDE_intro.html">基于 VS Code 的网页开发与部署</a></li>
+          <li><a href="html_mode.html">ULink SZ HTML 项目结构</a></li>
+          <li><a href="react_mode.html">React 项目结构与开发说明</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

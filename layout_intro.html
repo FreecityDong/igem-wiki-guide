@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>网页设计基础与布局入门</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>网页设计基础与布局入门</h1>
+</header>
+<div id="menubar-box"></div>
+<script>
+fetch('menu.html')
+  .then(res => res.text())
+  .then(html => { document.getElementById('menubar-box').innerHTML = html; });
+</script>
+<div class="container">
+<!-- Sidebar 实现 -->
+<aside>
+<h3>内容导航</h3>
+<ul>
+<li><a href="#section1">一、网页三要素</a></li>
+<li><a href="#section2">二、基础结构</a></li>
+<li><a href="#section3">三、Sidebar 布局</a></li>
+<li><a href="#section4">四、Nav 样式</a></li>
+<li><a href="#section5">五、实践任务</a></li>
+</ul>
+</aside>
+<!-- 主体内容 -->
+<main>
+<section id="section1">
+<h2>一、网页三要素：HTML + CSS + JS</h2>
+<p>一个网页由三种技术组成：</p>
+<ul>
+<li><strong>HTML：</strong> 负责结构，决定网页显示的内容</li>
+<li><strong>CSS：</strong> 负责样式，美化网页，控制颜色、布局、字体等</li>
+<li><strong>JavaScript：</strong> 负责行为，让网页动起来</li>
+</ul>
+</section>
+<section id="section2">
+<h2>二、基础页面结构</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;头部&lt;/header&gt;
+    &lt;nav&gt;导航栏&lt;/nav&gt;
+    &lt;main&gt;主要内容&lt;/main&gt;
+    &lt;footer&gt;页脚&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</section>
+<section id="section3">
+<h2>三、Sidebar（侧边栏）布局</h2>
+<p>Sidebar 常用于页面导航、目录显示、快速跳转等，常位于左侧或右侧。</p>
+<pre><code>&lt;div class="container"&gt;
+  &lt;aside&gt;侧边栏&lt;/aside&gt;
+  &lt;main&gt;主体内容&lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code>.container {
+  display: flex;
+}
+aside {
+  width: 220px;
+  background: #f0f0f0;
+  padding: 1em;
+}
+main {
+  flex: 1;
+  padding: 1em;
+}</code></pre>
+</section>
+<section id="section4">
+<h2>四、Nav Bar（导航栏）结构与样式</h2>
+<p>导航栏（Nav Bar）通常位于网页顶部，用于展示页面链接。</p>
+<pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;首页&lt;/a&gt;
+  &lt;a href="team.html"&gt;团队介绍&lt;/a&gt;
+  &lt;a href="project.html"&gt;项目内容&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<pre><code>nav {
+  background: #34495e;
+  padding: 1em;
+}
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}</code></pre>
+<p>Nav Bar 与 Sidebar 可组合使用：顶部用于模块跳转，侧边用于章节导航。</p>
+</section>
+<section id="section5">
+<h2>五、实践任务</h2>
+<ol>
+<li><strong>任务 1：</strong> 创建包含 <code>header</code>、<code>nav</code>、<code>main</code>、<code>footer</code> 的页面。</li>
+<li><strong>任务 2：</strong> 添加一个 Sidebar，列出“项目介绍 / 实验流程 / 团队成员”等。</li>
+<li><strong>任务 3：</strong> 使用 Flex 实现左右布局结构。</li>
+<li><strong>任务 4：</strong> 用 CSS 美化 Nav Bar，并实现鼠标悬停效果。</li>
+<li><strong>挑战任务：</strong> 模仿某个 iGEM Wiki 首页，完成一个仿真页面。</li>
+</ol>
+</section>
+</main>
+</div>
+</body>
+</html>

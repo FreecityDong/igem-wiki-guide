@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>基于 VS Code 的静态网页开发与部署说明</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>基于 VS Code 的静态网页开发与部署说明</h1>
+  </header>
+
+  <div id="menubar-box"></div>
+  <script>
+    fetch('menu.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('menubar-box').innerHTML = html; });
+  </script>
+
+  <div class="container">
+    <aside>
+      <h3>内容导航</h3>
+      <ul>
+        <li><a href="#section1">1. 安装 VS Code</a></li>
+        <li><a href="#section2">2. 安装推荐插件</a></li>
+        <li><a href="#section3">3. 创建项目结构</a></li>
+        <li><a href="#section4">4. 编写与预览网页</a></li>
+        <li><a href="#section5">5. GitHub Pages 部署</a></li>
+        <li><a href="#section6">6. 注意事项</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="section1">
+        <h2>1. 安装 Visual Studio Code</h2>
+        <ol>
+          <li>访问官网下载安装 VS Code：<a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></li>
+          <li>建议同时安装 Git：<a href="https://git-scm.com" target="_blank">https://git-scm.com</a></li>
+        </ol>
+      </section>
+
+      <section id="section2">
+        <h2>2. 安装推荐插件</h2>
+        <ul>
+          <li><strong>Live Server：</strong> 实时预览 HTML 页面 ✅</li>
+          <li><strong>HTML Preview：</strong> 本地预览 HTML 页面</li>
+          <li><strong>Prettier：</strong> 自动格式化 HTML / CSS / JS</li>
+          <li><strong>GitLens：</strong> 管理 Git 提交记录（可选）</li>
+        </ul>
+        <p>点击左侧插件图标，搜索插件名称并安装。</p>
+      </section>
+
+      <section id="section3">
+        <h2>3. 创建项目文件夹</h2>
+        <ol>
+          <li>新建文件夹，例如：<code>igem-wiki</code></li>
+          <li>使用 VS Code 打开</li>
+          <li>创建结构如下：</li>
+        </ol>
+        <pre><code>igem-wiki/
+├── index.html
+├── style.css
+└── script.js</code></pre>
+      </section>
+
+      <section id="section4">
+        <h2>4. 编写与预览网页</h2>
+        <ol>
+          <li>编写 <code>index.html</code>：</li>
+        </ol>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;iGEM 项目主页&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;欢迎访问我们的项目！&lt;/h1&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <ol start="2">
+          <li>右键 <code>index.html</code> → <strong>Open with Live Server</strong></li>
+          <li>浏览器中实时预览 HTML 页面</li>
+        </ol>
+      </section>
+
+      <section id="section5">
+        <h2>5. 使用 GitHub Pages 部署网站</h2>
+
+        <h3>步骤一：新建 GitHub 仓库</h3>
+        <ol>
+          <li>访问 <a href="https://github.com" target="_blank">github.com</a>，创建仓库（如 igem-wiki）</li>
+        </ol>
+
+        <h3>步骤二：上传代码</h3>
+        <pre><code>git init
+git remote add origin https://github.com/你的用户名/igem-wiki.git
+git add .
+git commit -m "首次提交"
+git push -u origin master</code></pre>
+
+        <h3>步骤三：启用 GitHub Pages</h3>
+        <ol>
+          <li>进入仓库页面 → <strong>Settings</strong></li>
+          <li>选择 <strong>Pages</strong></li>
+          <li>选择分支 <code>main</code> 或 <code>master</code>，路径 <code>/root</code></li>
+          <li>保存后等待几分钟</li>
+          <li>访问：<br><code>https://你的用户名.github.io/igem-wiki</code></li>
+        </ol>
+      </section>
+
+      <section id="section6">
+        <h2>6. 注意事项</h2>
+        <ul>
+          <li>确保 <code>index.html</code> 命名正确</li>
+          <li>所有路径使用相对路径</li>
+          <li>添加空文件 <code>.nojekyll</code>，避免 GitHub Pages 忽略某些资源</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
+    

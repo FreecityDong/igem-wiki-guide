@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript 语法手册</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>JavaScript 语法手册</h1>
+  </header>
+
+  <div id="menubar-box"></div>
+  <script>
+    fetch('menu.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('menubar-box').innerHTML = html; });
+  </script>
+
+  <div class="container">
+    <aside>
+      <h3>内容导航</h3>
+      <ul>
+        <li><a href="#section1">1. JS 是什么</a></li>
+        <li><a href="#section2">2. 引入方式</a></li>
+        <li><a href="#section3">3. 变量定义</a></li>
+        <li><a href="#section4">4. 数据类型</a></li>
+        <li><a href="#section5">5. 条件判断</a></li>
+        <li><a href="#section6">6. 循环语句</a></li>
+        <li><a href="#section7">7. 函数定义</a></li>
+        <li><a href="#section8">8. 事件监听</a></li>
+        <li><a href="#section9">9. DOM 操作</a></li>
+        <li><a href="#section10">10. 实用案例</a></li>
+        <li><a href="#section11">11. 练习建议</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="section1">
+        <h2>1. JavaScript 是什么？</h2>
+        <p>JavaScript 是网页的行为层，配合 HTML（结构）和 CSS（样式），可实现交互、动态内容、动画等功能。</p>
+      </section>
+
+      <section id="section2">
+        <h2>2. 如何引入 JavaScript</h2>
+        <h3>方式一：内联</h3>
+        <pre><code>&lt;button onclick="alert('你好！')"&gt;点击我&lt;/button&gt;</code></pre>
+
+        <h3>方式二：页面内部脚本</h3>
+        <pre><code>&lt;script&gt;
+  console.log("欢迎来到 iGEM Wiki！");
+&lt;/script&gt;</code></pre>
+
+        <h3>方式三：外部脚本</h3>
+        <pre><code>&lt;script src="main.js"&gt;&lt;/script&gt;</code></pre>
+        <p>推荐使用外部文件，有助于代码管理与复用。</p>
+      </section>
+
+      <section id="section3">
+        <h2>3. 变量定义</h2>
+        <pre><code>let name = "iGEM";
+const year = 2025;
+var count = 0;</code></pre>
+        <ul>
+          <li><code>let</code>：块作用域变量（推荐）</li>
+          <li><code>const</code>：常量，不可修改</li>
+          <li><code>var</code>：函数作用域变量（已不推荐）</li>
+        </ul>
+      </section>
+
+      <section id="section4">
+        <h2>4. 常见数据类型</h2>
+        <ul>
+          <li>字符串：<code>"Hello"</code>, <code>'World'</code></li>
+          <li>数字：<code>42</code>, <code>3.14</code></li>
+          <li>布尔值：<code>true</code>, <code>false</code></li>
+          <li>数组：<code>[1, 2, 3]</code></li>
+          <li>对象：<code>{name: "Alice", age: 20}</code></li>
+          <li>空值：<code>null</code>, <code>undefined</code></li>
+        </ul>
+      </section>
+
+      <section id="section5">
+        <h2>5. 条件判断</h2>
+        <pre><code>let score = 90;
+if (score &gt;= 90) {
+  console.log("优秀");
+} else {
+  console.log("加油！");
+}</code></pre>
+      </section>
+
+      <section id="section6">
+        <h2>6. 循环语句</h2>
+        <pre><code>for (let i = 0; i &lt; 5; i++) {
+  console.log("第 " + i + " 次");
+}</code></pre>
+      </section>
+
+      <section id="section7">
+        <h2>7. 函数定义与调用</h2>
+        <pre><code>function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("iGEM"));</code></pre>
+      </section>
+
+      <section id="section8">
+        <h2>8. 事件监听</h2>
+        <pre><code>document.getElementById("btn").addEventListener("click", function() {
+  alert("按钮被点击了！");
+});</code></pre>
+        <p>对应 HTML 示例：</p>
+        <pre><code>&lt;button id="btn"&gt;点击按钮&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="section9">
+        <h2>9. DOM 操作（网页元素控制）</h2>
+        <pre><code>// 修改元素文字
+document.getElementById("title").innerText = "新标题";
+
+// 改变样式
+document.querySelector(".box").style.backgroundColor = "lightblue";</code></pre>
+      </section>
+
+      <section id="section10">
+        <h2>10. 实用案例</h2>
+
+        <h3>显示当前时间</h3>
+        <pre><code>&lt;p id="time"&gt;&lt;/p&gt;
+&lt;script&gt;
+  const now = new Date();
+  document.getElementById("time").innerText = now.toLocaleString();
+&lt;/script&gt;</code></pre>
+
+        <h3>切换颜色按钮</h3>
+        <pre><code>&lt;button onclick="toggleColor()"&gt;切换颜色&lt;/button&gt;
+&lt;div id="box" style="width:100px;height:100px;background:red;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  function toggleColor() {
+    let box = document.getElementById("box");
+    box.style.background = (box.style.background === "red") ? "green" : "red";
+  }
+&lt;/script&gt;</code></pre>
+      </section>
+
+      <section id="section11">
+        <h2>11. 快速练习建议</h2>
+        <ol>
+          <li>创建一个按钮，点击后弹出“你好，iGEM！”</li>
+          <li>实现鼠标点击后切换文字或颜色</li>
+          <li>用 JS 改变页面上的图片路径或内容</li>
+          <li>让一个计数器 +1，并实时显示</li>
+        </ol>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
