@@ -184,26 +184,43 @@ section {
 
   .sidebar-toggle {
     display: block;
+    position: fixed;
+    top: 7.2rem; /* header + menubar */
+    left: 1rem;
     background: #e9ecef;
-    padding: 0.6rem 1rem;
-    margin: 1rem;
+    padding: 0.4rem 0.8rem;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
+    z-index: 1001;
+  }
+  
+  body.aside-open main {
+    margin-left: 250px; /* 与 aside 宽度保持一致，避免被遮挡 */
+    transition: margin-left 0.3s ease;
   }
 
   aside {
     display: none;
-    width: 100%;
-    position: relative;
-    top: 0;
-    height: auto;
-    margin: 0;
+    position: fixed;
+    top: 10.5rem;  /* header + toggle */
+    left: 5px;
+    width: 220px;
+    max-height: calc(100vh - 11.5rem);
+    background-color: #e9ecef;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   }
 
   aside.show {
     display: block;
-    margin: 1rem 0;
+  }
+
+  main {
+    transition: margin-left 0.3s ease;
   }
 
   .container {

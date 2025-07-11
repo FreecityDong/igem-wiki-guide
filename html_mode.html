@@ -12,12 +12,16 @@
     <h1>HTML模式项目结构与说明</h1>
   </header>
 
+  <!-- ☰ 菜单按钮：小屏幕下显示 -->
+  <div class="menubar-toggle" onclick="toggleMenu()">☰ 菜单</div>
   <div id="menubar-box"></div>
   <script>
     fetch('menu.html')
       .then(res => res.text())
       .then(html => { document.getElementById('menubar-box').innerHTML = html; });
   </script>
+  <!-- 📑 Sidebar 显示/隐藏按钮 -->
+  <div class="sidebar-toggle" onclick="toggleSidebar()">目录</div>
 
   <div class="container">
     <aside>
@@ -122,6 +126,7 @@ http://localhost:5000 或具体配置地址</code></pre>
       </section>
     </main>
   </div>
-
+  <!-- JS 控制菜单与目录展开 -->
+  <script src="script.js"></script>
 </body>
 </html>

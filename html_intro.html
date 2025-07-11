@@ -12,14 +12,16 @@
   <header>
     <h1>HTML语法手册</h1>
   </header>
-
-  <!-- 顶部导航栏 -->
+  <!-- ☰ 菜单按钮：小屏幕下显示 -->
+  <div class="menubar-toggle" onclick="toggleMenu()">☰ 菜单</div>
   <div id="menubar-box"></div>
   <script>
     fetch('menu.html')
       .then(res => res.text())
       .then(html => { document.getElementById('menubar-box').innerHTML = html; });
   </script>
+  <!-- 📑 Sidebar 显示/隐藏按钮 -->
+  <div class="sidebar-toggle" onclick="toggleSidebar()">目录</div>
 
   <!-- 页面主体部分 -->
   <div class="container">
@@ -129,6 +131,7 @@
       </section>
     </main>
   </div>
-
+  <!-- JS 控制菜单与目录展开 -->
+  <script src="script.js"></script>
 </body>
 </html>
