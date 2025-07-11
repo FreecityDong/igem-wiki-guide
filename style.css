@@ -8,6 +8,11 @@ body {
   padding-top: 8rem; /* header + menubar 的总高度：约128px（64 + 64） */
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 h1, h2 {
   color: #000000;
 }
@@ -61,6 +66,8 @@ nav.menubar {
   flex-wrap: wrap;
   gap: 1em;
   z-index: 999;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
 }
 nav.menubar a {
   color: #fff;
@@ -137,6 +144,7 @@ section {
     display: none;
     flex-direction: column;
     padding: 1rem;
+    margin-top: 2.5rem;
     background-color: #34495e;
   }
 
