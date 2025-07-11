@@ -132,7 +132,7 @@ section {
 }
 
 /* 📱 小屏幕下折叠导航栏和侧边栏 */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   nav.menubar {
     display: none;
     flex-direction: column;
