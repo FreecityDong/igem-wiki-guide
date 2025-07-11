@@ -123,3 +123,93 @@ main {
 section {
   margin-bottom: 2rem;
 }
+
+
+/* 默认隐藏菜单/目录按钮，仅小屏幕显示 */
+.menubar-toggle,
+.sidebar-toggle {
+  display: none;
+}
+
+/* 📱 小屏幕下折叠导航栏和侧边栏 */
+@media (max-width: 768px) {
+  nav.menubar {
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #34495e;
+  }
+
+  nav.menubar.show {
+    display: flex;
+  }
+
+  .menubar-toggle {
+    display: block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    background: #e9ecef;
+    padding: 0.6rem 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  aside {
+    display: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: auto;
+    margin: 0;
+  }
+
+  aside.show {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  nav.menubar a {
+    padding: 0.5rem;
+    display: block;
+    width: 100%;
+  }
+
+  body {
+    padding-top: 11rem; /* header + toggle + menubar 大约高度 */
+  }
+  .menubar-toggle,
+  .sidebar-toggle {
+    display: block;
+  }
+}

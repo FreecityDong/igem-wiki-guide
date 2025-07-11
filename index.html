@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -12,12 +11,19 @@
     <h1>iGEM 网页开发文档集</h1>
   </header>
 
+  <!-- ☰ 菜单按钮：小屏幕下显示 -->
+  <div class="menubar-toggle" onclick="toggleMenu()">☰ 菜单</div>
+
+  <!-- 顶部导航栏菜单：由 menu.html 动态加载 -->
   <div id="menubar-box"></div>
   <script>
     fetch('menu.html')
       .then(res => res.text())
       .then(html => { document.getElementById('menubar-box').innerHTML = html; });
   </script>
+
+  <!-- 📑 Sidebar 显示/隐藏按钮 -->
+  <div class="sidebar-toggle" onclick="toggleSidebar()">📑 目录</div>
 
   <div class="container">
     <main>
@@ -60,5 +66,8 @@
       </section>
     </main>
   </div>
+
+  <!-- JS 控制菜单与目录展开 -->
+  <script src="script.js"></script>
 </body>
 </html>
